@@ -1,12 +1,14 @@
 {
-  "name": "y",
-  "version": "y",
+  "name": "ethereum-org-server",
+  "version": "0.0.1",
   "description": "Ethereum.org API",
-  "main": "y",
+  "main": "index.js",
   "author": "Sam Richards <sam.richards@ethereum.org>",
   "license": "MIT",
   "dependencies": {
-    "express": "^4.17.1"
+    "dotenv": "^8.1.0",
+    "express": "^4.17.1",
+    "node-fetch": "^2.6.0"
   },
   "devDependencies": {
     "nodemon": "^1.19.3"
