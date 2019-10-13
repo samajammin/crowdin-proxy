@@ -4,5 +4,11 @@
   "description": "Ethereum.org API",
   "main": "y",
   "author": "Sam Richards <sam.richards@ethereum.org>",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "nodemon": "^1.19.3"
+  }
 }
