@@ -9,18 +9,21 @@ if (dotenv.error) {
 
 const fetch = require('node-fetch');
 const express = require('express');
+const cors = require('cors')
 const app = express();
+
+// TODO limit to ethereum.org
+// enable all CORS requests
+app.use(cors());
 
 // server configuration
 const PORT = 8080;
 
-// create a route for the app
-app.get('/', (req, res) => {
-  res.send('Hello Sam');
+app.get('/just-some-misc-health-check-endpoint', (req, res) => {
+  res.send('All good');
 });
 
-// create a route for CrowdIn
-app.get('/crowdin.json', (req, res) => {
+app.get('/crowdin', (req, res) => {
   const key = process.env.CROWDIN_API_KEY;
   const baseURL =
     'https://api.crowdin.com/api/project/ethereumfoundation/status';
